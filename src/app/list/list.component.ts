@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
+  title: string = "Ma ToDoList";
+
   items: [string, boolean][] = [   // Tableau items contenant chaque item
     ["Faire la vaisselle", false],
     ["Faire la lessive", false],

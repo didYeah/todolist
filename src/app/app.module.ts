@@ -8,6 +8,7 @@ import { AdditemComponent } from './additem/additem.component';
 import { SelectitemComponent } from './selectitem/selectitem.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DeleteltemComponent } from './deleteltem/deleteltem.component';
+import { TruncatePipe } from './truncate.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DeleteltemComponent } from './deleteltem/deleteltem.component';
     ListComponent,
     AdditemComponent,
     SelectitemComponent,
-    DeleteltemComponent
+    DeleteltemComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,
