@@ -10,12 +10,14 @@ export class ListComponent implements OnInit {
   title: string = "Ma ToDoList";
 
   items: [string, boolean][] = [   // Tableau items contenant chaque item
-    ["Faire la vaisselle", false],
-    ["Faire la lessive", false],
-    ["Ranger la buanderie", false],
-    ["Récupérer le colis", false],
-    ["Faire les courses", false],
-    ["Appeler l'école", false]
+    ["Déboucher le siphon du lavabo", false],
+    ["Assembler un meuble de rangement", false],
+    ["Nettoyer la table du salon", false],
+    ["Acheter du liquide vaisselle", false],
+    ["Ranger le grenier", false],
+    ["S'inscrire à une salle de sport", false],
+    ["Renouveler mon abonnement", false],
+    ["Prendre un café avec Joe et Emily", false]
   ];
   addNewItem = (newItem: string): void =>{ // Variable d'ajout d'un item
     this.items.push([newItem, false]);
