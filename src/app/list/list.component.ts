@@ -25,8 +25,9 @@ export class ListComponent implements OnInit {
     this.items = itemList;
   }
 
-  updateItems =(event: [string, boolean][]): void =>{ // Mise à jour des tous les items sélectionnés
-    this.updateItems(event);
+  updateItems =(items: [string, boolean][]): void =>{ // Mise à jour des tous les items sélectionnés
+    //this.updateItems(items);
+    this.items = items;
   }
 
   constructor() { }
