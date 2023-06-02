@@ -8,11 +8,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class DeleteltemComponent implements OnInit {
 
   @Input() allItems: [string, boolean][] =[];
-  @Output() updateltems: EventEmitter<[string, boolean][]> = new EventEmitter<[string, boolean][]>();
+  @Output() updateItems: EventEmitter<[string, boolean][]> = new EventEmitter<[string, boolean][]>();
 
   deleteSelected = (): void =>{
-    this.allItems = this.allItems.filter(item => item[1] === false);
-    this.updateltems.emit(this.allItems);
+    const filteredItems = this.allItems.filter(item => !item[1]);
+    this.updateItems.emit(filteredItems);
   }
 
   constructor() { }
