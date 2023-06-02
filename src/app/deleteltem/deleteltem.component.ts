@@ -7,12 +7,20 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class DeleteltemComponent implements OnInit {
 
-  @Input() allItems: [string, boolean][] =[];
+  /*@Input() allItems: [string, boolean][] =[];
   @Output() updateItems: EventEmitter<[string, boolean][]> = new EventEmitter<[string, boolean][]>();
 
   deleteSelected = (): void =>{
-    this.allItems = this.allItems.filter(item => item[1] === true); // Filtrer les objets avec la valeur booléenne true
+    this.allItems = this.allItems.filter(item => item[1] === false); // Filtrer les objets avec la valeur booléenne false
     this.updateItems.emit(this.allItems); 
+  }*/
+
+  @Input() allItems: [string, boolean][] = [];
+  @Output() updateItems = new EventEmitter<[string, boolean][]>();
+
+  deleteSelected() {
+    this.allItems = this.allItems.filter(item => !item[1]);
+    this.updateItems.emit(this.allItems);
   }
 
   constructor() { }
