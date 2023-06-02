@@ -4,7 +4,7 @@
 <ul>
   <li *ngFor="let item of items; let indexOfElement = index"> <!-- On boucle sur chaque item, et chaque index -->
     <input type="checkbox" [checked]="item[1]" (change)="updateItem(indexOfElement, !item[1])">
-    {{ item[0]| lowercase }}
+    {{ item[0]| lowercase | truncate }}
   </li>
 </ul>
 
