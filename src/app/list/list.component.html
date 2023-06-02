@@ -1,10 +1,10 @@
 <h1>{{ title | uppercase }}</h1>
 
-<code>Affichage de la liste en majuscule à l'aide d'un pipe</code>
+<code>Affichage de la liste en minuscule tronquée après 10 caractères à l'aide de pipes</code>
 <ul>
   <li *ngFor="let item of items; let indexOfElement = index"> <!-- On boucle sur chaque item, et chaque index -->
     <input type="checkbox" [checked]="item[1]" (change)="updateItem(indexOfElement, !item[1])">
-    {{ item[0]| uppercase }}
+    {{ item[0]| lowercase | truncate }}
   </li>
 </ul>
 
