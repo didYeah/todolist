@@ -1,3 +1,9 @@
 ul{
     list-style-type: none;
   }
+  
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  color : #E1A52B;
+}
