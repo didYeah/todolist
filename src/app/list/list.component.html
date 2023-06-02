@@ -1,11 +1,12 @@
 <h1>Liste des tâches à effectuer</h1>
 
 <ul>
-    <li *ngFor="let item of items; let index = index">
-      <input type="checkbox" [checked]="item[1]" (change)="updateItem(index, !item[1])">
+    <li  *ngFor="let item of items; let indexOfElement = index"> <!-- On boucle sur chaque item, et chaque index -->
+      <input type="checkbox" [checked]="item[1]" (change)="updateItem(indexOfElement, !item[1])">
       {{ item[0] }}
     </li>
   </ul>
-  
-  <app-additem (newItemEvent)="addNewItem($event)"></app-additem>
+
+  <app-additem (newItemEvent)="addNewItem($event)"></app-additem> <!-- Lien entre additem et la liste des items-->
   <app-selectitem [allItems] = "items"></app-selectitem>
+
