@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  items: [string, boolean][] = [["défaut", false]]; // Tableau items contenant chaque item
+  items: [string, boolean][] = [   // Tableau items contenant chaque item
+    ["item 1", false],
+    ["item 2", false],
+    ["item 3", false]
+  ];
   addNewItem = (newItem: string): void =>{ // Variable d'ajout d'un item
     this.items.push([newItem, false]);
   }

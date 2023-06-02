@@ -12,8 +12,8 @@ export class AdditemComponent implements OnInit {
   @Output() newItemEvent = new EventEmitter<string>();
 
   addNewItem =(): void =>{
-    this.newItemEvent.emit(this.newItem);
-    this.newItem = '';
+    this.newItemEvent.emit(this.newItem); // NewItemEvent envoie le contenu du nouvel Item
+    this.newItem = ''; // On réinitialise Item à une nouvelle valeur vide pour pouvoir recueillir un nouvel éventuel item
   }
 
   constructor() { }

@@ -1,5 +1,4 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
-
 @Component({
   selector: 'app-selectitem',
   templateUrl: './selectitem.component.html',
@@ -27,6 +26,11 @@ export class SelectitemComponent implements OnInit {
   unselectAll() {
     this.allItems.forEach(item => (item[1] = false));
     this.updateItems.emit(this.allItems);
+  }
+
+  deleteSelected() {
+    const filteredItems = this.allItems.filter(item => !item[1]);
+    this.updateItems.emit(filteredItems);
   }
 
   constructor() {}

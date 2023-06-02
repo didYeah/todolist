@@ -10,9 +10,9 @@ export class DeleteltemComponent implements OnInit {
   @Input() allItems: [string, boolean][] =[];
   @Output() updateItems: EventEmitter<[string, boolean][]> = new EventEmitter<[string, boolean][]>();
 
-  deleteSelected = (): void =>{
-    const filteredItems = this.allItems.filter(item => !item[1]);
-    this.updateItems.emit(filteredItems);
+  deleteSelected(): void {
+    this.allItems = this.allItems.filter(item => item[1] === false); // Filtrer les objets avec la valeur booléenne false
+    this.updateItems.emit(this.allItems); // Émettre la variable mise à jour via l'émetteur
   }
 
   constructor() { }
