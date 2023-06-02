@@ -19,7 +19,7 @@ export class DeleteltemComponent implements OnInit {
   @Output() updateItems = new EventEmitter<[string, boolean][]>();
 
   deleteSelected() {
-    this.allItems = this.allItems.filter(item => !item[1]);
+    this.allItems = this.allItems.filter(item => !item[1] === false); // Filtrer les objets avec la valeur booléenne false
     this.updateItems.emit(this.allItems);
   }
 
