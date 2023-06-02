@@ -8,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class ListComponent implements OnInit {
 
   items: [string, boolean][] = [   // Tableau items contenant chaque item
-    ["item 1", false],
-    ["item 2", false],
-    ["item 3", false]
+    ["Faire la vaisselle", false],
+    ["Faire la lessive", false],
+    ["Ranger la buanderie", false],
+    ["Récupérer le colis", false],
+    ["Faire les courses", false],
+    ["Appeler l'école", false]
   ];
   addNewItem = (newItem: string): void =>{ // Variable d'ajout d'un item
     this.items.push([newItem, false]);
